@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MusicNotesCodeTest.SongPage" Title="{Binding id}">
+	<ContentPage.Content>
+		<TableView>
+			<TableRoot>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                            <Label Text="Title" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding title}" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                            <Label Text="Artist" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding artist}" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                            <Label Text="Key" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding key}" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                            <Label Text="Instruments" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding instruments}" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                            <Label Text="Pages" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding pages}" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                            <Label Text="View Count" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding views}" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+		</TableView>
+	</ContentPage.Content>
+</ContentPage>

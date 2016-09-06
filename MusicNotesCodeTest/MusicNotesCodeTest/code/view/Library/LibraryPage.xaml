@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.BackButtonTitle="Back"
+			 x:Class="MusicNotesCodeTest.code.view.Library.LibraryPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:local="clr-namespace:MusicNotesCodeTest;assembly=MusicNotesCodeTest"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+	<ListView x:Name="listView">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+						<Image x:Name="musicIcon" Source="{local:ImageResource MusicNotesCodeTest.images.music-icon.png}"/>
+
+							<StackLayout Orientation="Vertical">
+								<Label Text = "{Binding Title}" FontSize="12" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand">
+									<Label.FontFamily>
+						            	<OnPlatform x:TypeArguments="x:String">
+						                	<OnPlatform.iOS>HelveticaNeue-Medium</OnPlatform.iOS>
+						                	<OnPlatform.Android>sans-serif-medium</OnPlatform.Android>
+						            	</OnPlatform>
+						     		</Label.FontFamily>
+								</Label>
+								<Label Text = "{Binding Subtitle}" FontSize="9" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+									<Label.FontFamily>
+						            	<OnPlatform x:TypeArguments="x:String">
+						                	<OnPlatform.iOS>HelveticaNeue-light</OnPlatform.iOS>
+						                	<OnPlatform.Android>sans-serif-light</OnPlatform.Android>
+						            	</OnPlatform>
+						     		</Label.FontFamily>
+								</Label>
+							</StackLayout>
+
+						<Image x:Name="rightArrow" Source="{local:ImageResource MusicNotesCodeTest.images.arrow-right.png}" HorizontalOptions="EndAndExpand"/>
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>
